@@ -33,34 +33,36 @@ namespace LinqExercise
             Console.WriteLine("BREAK");
             Console.WriteLine();
 
-            var goUp = numbers.OrderBy(num => num);
+            numbers.OrderBy(num => num).ToList().ForEach(asc => Console.WriteLine(asc));
             
-            foreach (var number in goUp)
-            {
-                Console.WriteLine(number);
-            }
+            //foreach (var number in goUp)
+            //{
+            //    Console.WriteLine(number);
+            //}
 
             //TO
             //DO: Order numbers in decsending order adn print to the console
             Console.WriteLine("BREAK");
             Console.WriteLine();
 
-            var goDown = numbers.OrderByDescending(num => num);
+            numbers.OrderByDescending(num => num).ToList().ForEach(desc => Console.WriteLine(desc));
             
-            foreach (var number in goDown)
-            {   
-                Console.WriteLine(number);
-            }
+            //foreach (var number in goDown)
+            //{   
+            //    Console.WriteLine(number);
+            //}
 
             //TODO: Print to the console only the numbers greater than 6
             Console.WriteLine("BREAK");
             Console.WriteLine();
 
-            numbers.Where(num => num > 6).ToList().ForEach(num => Console.WriteLine(num));
+            numbers.Where(num => num > 6).ToList().ForEach(Fish => Console.WriteLine(Fish));
 
             //TODO: Order numbers in any order (acsending or desc) but only print 4 of them **foreach loop only!**
             Console.WriteLine("BREAK");
             Console.WriteLine();
+
+            var goDown = numbers.OrderByDescending(num => num).ToList();
 
             foreach (var num in goDown.Take(4))
             {
@@ -115,12 +117,13 @@ namespace LinqExercise
             Console.WriteLine("BREAK");
             Console.WriteLine();
 
-            var Fish = employees.Append(new Employee("Donte'", "Fisher", 39, 1));
+            employees.Append(new Employee("Donte'", "Fisher", 39, 1)).ToList().ForEach(Fish => Console.WriteLine
+            ($"{Fish.FullName}, {Fish.Age}, {Fish.YearsOfExperience}"));
 
-            foreach (var item in Fish)
-            {
-                Console.WriteLine($"{item.FullName}, {item.Age}, {item.YearsOfExperience}");
-            }
+            //foreach (var item in Fish)
+            //{
+            //    Console.WriteLine($"{item.FullName}, {item.Age}, {item.YearsOfExperience}");
+            //}
 
 
 
