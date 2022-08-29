@@ -35,7 +35,7 @@ namespace LinqExercise
 
             numbers.OrderBy(num => num).ToList().ForEach(asc => Console.WriteLine(asc));
             
-            //foreach (var number in goUp)
+            //foreach (var number in asc)
             //{
             //    Console.WriteLine(number);
             //}
@@ -47,7 +47,7 @@ namespace LinqExercise
 
             numbers.OrderByDescending(num => num).ToList().ForEach(desc => Console.WriteLine(desc));
             
-            //foreach (var number in goDown)
+            //foreach (var number in desc)
             //{   
             //    Console.WriteLine(number);
             //}
