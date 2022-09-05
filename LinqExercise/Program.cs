@@ -62,9 +62,9 @@ namespace LinqExercise
             Console.WriteLine("BREAK");
             Console.WriteLine();
 
-            var goDown = numbers.OrderByDescending(num => num).ToList();
+            var goDown = numbers.OrderByDescending(num => num).Take(4).ToList();
 
-            foreach (var num in goDown.Take(4))
+            foreach (var num in goDown)
             {
                 Console.WriteLine(num);
             }
